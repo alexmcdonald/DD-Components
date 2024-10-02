@@ -1,0 +1,51 @@
+<template>
+
+	<template if:false={dataReady}>
+
+		<lightning-spinner size="medium"></lightning-spinner>
+
+	</template>
+
+	<template if:true={dataReady}>
+
+		<article class="slds-card dcrl-card">
+			<div class="slds-card__header slds-grid dcrl-card-title slds-p-around_none slds-m-bottom_none">
+				<header class="slds-media slds-media_center slds-has-flexi-truncate" part="header">
+					<div class="slds-media__body" part="title">
+						<h2 class="slds-card__header-title">
+							<span class="slds-text-heading_small slds-truncate">
+								<slot name="title">
+									<div class="slds-p-around_medium" slot="title">
+										<h3>
+											<template if:true={titleIcon}>
+												<lightning-icon icon-name={titleIcon} size="small" class="slds-m-right_small"></lightning-icon>
+											</template>
+											{title}
+											<template if:true={showCount}>
+												<span class="slds-m-left_xx-small">({recordCount})</span>
+	</template>
+	</h3>
+	</div>
+	</slot>
+	</span>
+	</h2>
+	</div>
+	<div class="slds-no-flex" part="actions">
+		<slot name="actions"></slot>
+	</div>
+	</header>
+	</div>
+	<div class="slds-card__body slds-m-top_none" part="body" style="border-top: solid 1px rgb(201, 201, 201);">
+		<slot>
+			<lightning-datatable columns={columns} data={dcrlList} key-field={keyField} hide-checkbox-column="true"
+				onsort={handleSort} sorted-by={sortedBy} sorted-direction={sortedDirection} column-widths-mode="auto">
+			</lightning-datatable>
+		</slot>
+	</div>
+	<slot class="slds-hide" name="footer"></slot>
+
+	</article>
+
+</template>
+
+</template>

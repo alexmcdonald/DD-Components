@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>60.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>DD: Related List</masterLabel>
+	<description>Custom Data Cloud Related List component.  For use in the Data Cloud Home CRM org.</description>
+	<targets>
+		<target>lightning__RecordPage</target>
+	</targets>
+	<targetConfigs>
+		<targetConfig targets="lightning__RecordPage">
+            <property name="title" type="String" label="Title" />
+            <property name="titleIcon" type="String" label="Title Icon" description="Icon to display next to title. Use any slds icon in format collection:icon eg. utility:feed" default="utility:feed" />
+			<property name="showCount" type="Boolean" label="Show Count" default="true" />
+			<property name="xconfigId" type="String" label="DDRL Config Id" description="The Data Cloud Related List Config Id. Grab it from the URL." />
+            <property name="xdataSourceId" type="String" label="Data Source Id" description="The name of the Data Cloud Data Source Id that relates to THIS record. To refresh this list with new Data Sources, re-run the Data Cloud Feed Configurator." />
+            <property name="xdataSourceObjectId" type="String" label="Data Source Object Id" description="The name of the Data Cloud Data Source Object Id that relates to THIS record. To refresh this list with new Data Source Objects, re-run the Data Cloud Feed Configurator." />
+			<property name="xindividualIdentityLinkObject" type="String" label="Identity Rulesets Individual Link Object Name" />
+			<property name="recordContactField" type="String" label="Record Contact Field" description="The field path from this record to a contact/lead. eg. on a case the field could be ContactId. On a Work Order it could be Case.ContactId." />
+		</targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>

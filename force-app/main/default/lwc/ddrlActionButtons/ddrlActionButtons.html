@@ -1,0 +1,55 @@
+<template>
+
+	<template if:false={dataReady}>
+
+		<lightning-spinner size="medium"></lightning-spinner>
+
+	</template>
+
+	<template if:true={dataReady}>
+
+		<article class="slds-card dcrl-card">
+			<div class="slds-card__header slds-grid dcrl-card-title slds-p-around_none slds-m-bottom_none">
+				<header class="slds-media slds-media_center slds-has-flexi-truncate" part="header">
+					<div class="slds-media__body" part="title">
+						<h2 class="slds-card__header-title">
+							<span class="slds-text-heading_small slds-truncate">
+								<slot name="title">
+									<div class="slds-p-around_medium" slot="title">
+										<h3>
+											<template if:true={titleIcon}>
+												<lightning-icon icon-name={titleIcon} size="small" class="slds-m-right_small"></lightning-icon>
+											</template>
+											{title}
+										</h3>
+									</div>
+								</slot>
+							</span>
+						</h2>
+					</div>
+					<div class="slds-no-flex" part="actions">
+						<slot name="actions"></slot>
+					</div>
+				</header>
+			</div>
+			<div class="slds-card__body slds-m-top_none" part="body" style="border-top: solid 1px rgb(201, 201, 201);">
+				<slot>
+					<div class="slds-m-around_medium">
+
+						<template for:each={visibleButtons} for:item="btn" for:index=ind>
+							<lightning-button class="slds-m-right_medium" key={btn.Id} data-id={btn.Id} data-ind={ind}
+								label={btn.Name} onclick={handleButtonClick} variant={btn.variant__c}
+								icon-name={btn.iconName__c} icon-position={btn.iconPosition__c}
+								tab-index={btn.tabIndex__c}></lightning-button>
+						</template>
+
+					</div>
+				</slot>
+			</div>
+			<slot class="slds-hide" name="footer"></slot>
+
+		</article>
+
+	</template>
+
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>additionalWhereClause__c</fullName>
+    <inlineHelpText>The SQL/SOQL will automatically be scoped to the unified individual.  Additional filters can be applied here. eg. ssot__CaseStatusId__c != &apos;Closed&apos;.  Don&apos;t include WHERE at the front.</inlineHelpText>
+    <label>Additional WHERE Clauses</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

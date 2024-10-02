@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>orderByClause__c</fullName>
+    <inlineHelpText>eg. ORDER BY ssot__Id__c ASC.  Must include &quot;ORDER BY&quot;.  You can optionally include a LIMIT clause after the ORDER BY.  eg. ORDER BY ssot__CreatedDate__c DESC LIMIT 10.</inlineHelpText>
+    <label>ORDER BY Clause</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

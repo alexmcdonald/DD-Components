@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>DDRL: Data Cloud Filtered Related List Flow Component</masterLabel>
+	<description>Custom Data Cloud Related List component.  For use in the Data Cloud Home CRM org, in Flow screens.</description>
+	<targets>
+		<target>lightning__FlowScreen</target>
+	</targets>
+	<targetConfigs>
+		<targetConfig targets="lightning__FlowScreen">
+            <property name="title" type="String" label="Title" />
+            <property name="titleIcon" type="String" label="Title Icon" description="Icon to display next to title. Use any slds icon in format collection:icon eg. utility:feed" default="utility:feed" />
+			<property name="showCount" type="Boolean" label="Show Count" />
+			<property name="xconfigId" type="String" label="DDRL Config Id" description="The Data Cloud Related List Config Record Id." />
+            <property name="xdataSourceId" type="String" label="Data Source Id" description="The name of the Data Cloud Data Source Id that relates to THIS record. To refresh this list with new Data Sources, re-run the Data Cloud Feed Configurator." />
+            <property name="xdataSourceObjectId" type="String" label="Data Source Object Id" description="The name of the Data Cloud Data Source Object Id that relates to THIS record. To refresh this list with new Data Source Objects, re-run the Data Cloud Feed Configurator." />
+			<property name="xindividualIdentityLinkObject" type="String" label="Identity Rulesets Individual Link Object Name" />
+			<property name="recordContactField" type="String" label="Record Contact Field" description="The field path from this record to a contact/lead. eg. on a case the field could be ContactId. On a Work Order it could be Case.ContactId." />
+			<property name="recordId" type="String" label="Record Id" />
+			<property name="objectApiName" type="String" label="Object Api Name" />
+
+			<property name="xStartDate" type="Date" label="Start Date" />
+			<property name="xEndDate" type="Date" label="End Date" />
+			<property name="eventField" type="String" label="Event Time Field Name" />
+			<property name="filter1Field" type="String" label="Filter 1 Field Name" />
+			<property name="xFilter1Value" type="String" label="Filter 1 Value" />
+			<property name="filter2Field" type="String" label="Filter 2 Field Name" />
+			<property name="xFilter2Value" type="String" label="Filter 2 Value" />
+			<property name="filter3Field" type="String" label="Filter 3 Field Name" />
+			<property name="xFilter3Value" type="String" label="Filter 3 Value" />
+			<property name="filter4Field" type="String" label="Filter 4 Field Name" />
+			<property name="xFilter4Value" type="String" label="Filter 4 Value" />
+		</targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>

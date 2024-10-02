@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>DDRL: Data Cloud Action Buttons</masterLabel>
+	<targets>
+		<target>lightning__RecordPage</target>
+	</targets>
+	<targetConfigs>
+		<targetConfig targets="lightning__RecordPage">
+            <property name="title" type="String" label="Title" />
+            <property name="titleIcon" type="String" label="Title Icon" description="Icon to display next to title. Use any slds icon in format collection:icon eg. utility:feed" default="utility:feed" />
+			<property name="xconfigId" type="String" label="DDRL Config Id" description="The Data Cloud Related List Config Id that is sending selected items to this component." />
+		</targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>timeZone__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Long TZ Identifier for the time zone to display the date time field in.  Refer to https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all time zones.  NB: abbreviations like GMT+11 don&apos;t work.</inlineHelpText>
+    <label>Time Zone</label>
+    <length>55</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

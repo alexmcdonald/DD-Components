@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>DDRL: Tab Label Setter</masterLabel>
+	<description>Sets a console tabs icon and label to values passed in as parameters on the URL.</description>
+	<targets>
+		<target>lightning__RecordPage</target>
+	</targets>
+</LightningComponentBundle>
